@@ -1,0 +1,27 @@
+{
+    "name": "alex-house/habit-pool-mentors",
+    "description": "alex-house/habit-pool-mentors",
+    "type": "shopware-platform-plugin",
+    "version": "1.0.0",
+    "license": "MIT",
+    "require": {
+        "shopware/core": "~6.6.0"
+    },
+    "extra": {
+        "shopware-plugin-class": "AlexHouse\\HabitPoolMentors",
+        "label": {
+            "de-DE": "Mentors plugin",
+            "en-GB": "Mentors plugin"
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "AlexHouse\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AlexHouse\\Tests\\": "tests/"
+        }
+    }
+}

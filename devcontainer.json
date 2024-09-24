@@ -1,0 +1,33 @@
+{
+  "name": "Shopware Dev Container",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "shopware",
+  "workspaceFolder": "/var/www/html",
+  "settings": {
+    "php.validate.executablePath": "/usr/local/bin/php",
+    "php.suggest.basic": false,
+    "xdebug.remote_enable": true,
+    "xdebug.remote_autostart": true
+  },
+  "extensions": [
+    "bmewburn.vscode-intelephense-client",
+    "xdebug.php-pack"
+  ],
+  "postCreateCommand": "composer install",
+  "remoteUser": "root",
+  "forwardPorts": [
+    80,
+    3306,
+    22,
+    8888,
+    9999,
+    9998
+  ],
+  "mounts": [
+    "source=shop04_volume,target=/var/www/html,type=volume"
+  ],
+  "shutdownAction": "stopCompose",
+  "remoteEnv": {
+    "XDEBUG_ENABLED": "1"
+  }
+}

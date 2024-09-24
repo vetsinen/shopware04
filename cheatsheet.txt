@@ -1,0 +1,10 @@
+docker-compose up  --force-recreate -V
+
+docker exec -it shopware04 /bin/bash
+ bin/console list
+ bin/console about
+
+ php bin/console plugin:refresh
+
+ bin/console plugin:create HabitPoolMentors
+
